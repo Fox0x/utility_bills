@@ -1,0 +1,25 @@
+.styledButton {
+	width: 50%;
+	height: 50px;
+	margin-top: 1.5em;
+	border-radius: 40px;
+	border: none;
+    background-color: #141F26;
+	color: #ffffff70;
+	font-size: 20px;
+	font-weight: bold;
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+
+.styledButton:hover {
+    outline: 3px solid #96e296;
+	color: #96e296;
+	box-shadow: inset 0px 0px 0px #0000002b, 0px 5px 2px #000000a2;
+	transform: translateY(-3px);
+}
+
+.styledButton:active {
+	background-color: #3A6073;
+}

@@ -9,13 +9,13 @@ export default function UtilityComponent() {
 	return (
 		<div className="utility__wrapper">
 			<div className={css.form__wrapper}>
-                <PrevMonthData/>
+				<PrevMonthData />
 				<UtilityForm />
 			</div>
-            <div className={css.graph__wrapper}>
-                <Chart/>
-                <Pie/>
-            </div>
+			<div className={css.graph__wrapper}>
+				<Chart />
+				<Pie />
+			</div>
 		</div>
 	);
 }

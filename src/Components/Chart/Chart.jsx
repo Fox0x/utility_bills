@@ -47,13 +47,12 @@ export default class Example extends PureComponent {
 					<XAxis dataKey="date" type="category" stroke="#ffffff70" />
 					<YAxis stroke="#ffffff70" type="number" />
 					<Tooltip />
-					<Legend iconSize={10}/>
+					<Legend iconSize={10} />
 					<Line
 						type="monotone"
 						dataKey="Холодная"
 						stroke="#8884D8"
 						strokeWidth={3}
-						
 					/>
 					<Line
 						type="monotone"

@@ -15,13 +15,34 @@ export default function PrevMonthData() {
 	return (
 		<div className={css.data__table}>
 			<h3 className={css.data__header}>{prevMonthData.date}</h3>
-			<StyledInput disabled placeholder={`Холодная вода:  ${prevMonthData.coldWater} ₽`}/>
-            <StyledInput disabled placeholder={`Горячая вода:  ${prevMonthData.hotWater} ₽`}/>
-            <StyledInput disabled placeholder={`Отопление:  ${prevMonthData.heating} ₽`}/>
-            <StyledInput disabled placeholder={`Электричество:  ${prevMonthData.electricity} ₽`}/>
-            <StyledInput disabled placeholder={`Газ:  ${prevMonthData.gas} ₽`}/>
-            <StyledInput disabled placeholder={`Водоотведение:  ${prevMonthData.sewage} ₽`}/>
-            <StyledInput disabled placeholder={`Мусор:  ${prevMonthData.garbage} ₽`}/>
+			<StyledInput
+				disabled
+				placeholder={`Холодная вода:  ${prevMonthData.coldWater} ₽`}
+			/>
+			<StyledInput
+				disabled
+				placeholder={`Горячая вода:  ${prevMonthData.hotWater} ₽`}
+			/>
+			<StyledInput
+				disabled
+				placeholder={`Отопление:  ${prevMonthData.heating} ₽`}
+			/>
+			<StyledInput
+				disabled
+				placeholder={`Электричество:  ${prevMonthData.electricity} ₽`}
+			/>
+			<StyledInput
+				disabled
+				placeholder={`Газ:  ${prevMonthData.gas} ₽`}
+			/>
+			<StyledInput
+				disabled
+				placeholder={`Водоотведение:  ${prevMonthData.sewage} ₽`}
+			/>
+			<StyledInput
+				disabled
+				placeholder={`Мусор:  ${prevMonthData.garbage} ₽`}
+			/>
 		</div>
 	);
 }

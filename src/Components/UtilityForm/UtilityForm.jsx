@@ -4,14 +4,17 @@ import StyledInput from "../UI/StyledInput/StyledInput";
 import StyledButton from "../UI/StyledButton/StyledButton";
 
 export default function UtilityForm() {
-	const [utility, setUtility] = React.useState({
-		coldWater: "",
-		hotWater: "",
-		heating: "",
-		electricity: "",
-		gas: "",
-		sewage: "",
-		garbage: "",
+	const id = `${new Date().getMonth()}/${new Date().getFullYear()}`;
+	const [utility, setUtility] = React.useState(() => {
+		return (JSON.parse(localStorage.getItem(id)) || {
+			coldWater: "",
+			hotWater: "",
+			heating: "",
+			electricity: "",
+			gas: "",
+			sewage: "",
+			garbage: "",
+		});
 	});
 
 	const [currentDate] = React.useState(() => {
@@ -25,7 +28,6 @@ export default function UtilityForm() {
 
 	const saveBills = (event) => {
 		event.preventDefault();
-		const id = `${new Date().getMonth()}/${new Date().getFullYear()}`;
 		localStorage.setItem(
 			id,
 			JSON.stringify({ date: currentDate, ...utility })

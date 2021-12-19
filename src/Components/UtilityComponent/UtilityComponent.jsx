@@ -1,7 +1,7 @@
 import React from "react";
 import css from "./UtilityComponent.module.css";
 import UtilityForm from "../UtilityForm/UtilityForm";
-import UtilityGraph from "../UtilityGraph/UtilityGraph";
+import Chart from "../Chart/Chart";
 import PrevMonthData from "../PrevMonthData/PrevMonthData";
 
 export default function UtilityComponent() {
@@ -12,7 +12,7 @@ export default function UtilityComponent() {
 				<UtilityForm />
 			</div>
             <div className={css.graph__wrapper}>
-                <UtilityGraph/>
+                <Chart/>
             </div>
 		</div>
 	);

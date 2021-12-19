@@ -4,7 +4,7 @@ import css from "./StyledInput.module.css";
 export default function StyledInput(props) {
 	return (
 		<input
-			type="text"
+			type="number"
 			className={css.styledInput}
 			{...props}></input>
 	);

@@ -34,6 +34,7 @@ const getDataFromLocalStorage = () => {
 
 export default class Example extends PureComponent {
 	render() {
+		if(!localStorage.length) return null;
 		return (
 			<ResponsiveContainer width="50%" height="50%">
 				<LineChart

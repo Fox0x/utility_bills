@@ -1,9 +1,10 @@
 import "./App.css";
-import UtilityForm from "./Components/UtilityForm/UtilityForm";
+import UtilityComponent from "./Components/UtilityComponent/UtilityComponent";
+
 
 function App() {
 	return <div className="App">
-		<UtilityForm/>
+		<UtilityComponent/>
 	</div>;
 }
 

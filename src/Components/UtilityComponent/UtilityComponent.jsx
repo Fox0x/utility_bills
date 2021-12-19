@@ -3,6 +3,7 @@ import css from "./UtilityComponent.module.css";
 import UtilityForm from "../UtilityForm/UtilityForm";
 import Chart from "../Chart/Chart";
 import PrevMonthData from "../PrevMonthData/PrevMonthData";
+import Pie from "../Pie/Pie";
 
 export default function UtilityComponent() {
 	return (
@@ -13,6 +14,7 @@ export default function UtilityComponent() {
 			</div>
             <div className={css.graph__wrapper}>
                 <Chart/>
+                <Pie/>
             </div>
 		</div>
 	);

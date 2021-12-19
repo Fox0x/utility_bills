@@ -29,7 +29,7 @@ export default function UtilityForm() {
 	});
 
 	const saveBills = (event) => {
-		event.preventDefault();
+		// event.preventDefault(); // remove this line for update graphs
 		localStorage.setItem(
 			id,
 			JSON.stringify({

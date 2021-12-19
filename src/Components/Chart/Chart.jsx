@@ -9,114 +9,85 @@ import {
 	ResponsiveContainer,
 } from "recharts";
 
-const data = [
-	{
-		name: "Июнь",
-		coldWater: 1030,
-		hotWater: 2200,
-		heating: 3340,
-		electricity: 4020,
-		gas: 1500,
-		sewage: 600,
-		garbage: 2780,
-	},
-	{
-		name: "Июль",
-		coldWater: 970,
-		hotWater: 2190,
-		heating: 3490,
-		electricity: 4020,
-		gas: 2300,
-		sewage: 600,
-		garbage: 2980,
-	},
-	{
-		name: "Август",
-		coldWater: 1030,
-		hotWater: 2700,
-		heating: 3400,
-		electricity: 400,
-		gas: 2000,
-		sewage: 600,
-		garbage: 2980,
-	},
-	{
-		name: "Сентябрь",
-		coldWater: 90,
-		hotWater: 210,
-		heating: 3490,
-		electricity: 4020,
-		gas: 2300,
-		sewage: 700,
-		garbage: 100,
-	},
-	{
-		name: "Октябрь",
-		coldWater: 1030,
-		hotWater: 2200,
-		heating: 3340,
-		electricity: 4020,
-		gas: 1500,
-		sewage: 600,
-		garbage: 2780,
-	},
-];
+const getDataFromLocalStorage = () => {
+	const storage = { ...localStorage };
+	const data = [];
+
+	for (const key in storage) {
+		const value = JSON.parse(storage[key]);
+		data.push({
+			id: value.id,
+			date: value.date.charAt(0).toUpperCase() + value.date.slice(1, -5),
+			Холодная: value.coldWater,
+			Горячая: value.hotWater,
+			Отопление: value.heating,
+			Электричество: value.electricity,
+			Газ: value.gas,
+			Водоотведение: value.sewage,
+			Мусор: value.garbage,
+		});
+	}
+	data.sort((a, b) => a.id - b.id);
+	data.length > 12 ?? (data.length = 12);
+	return data;
+};
 
 export default class Example extends PureComponent {
 	render() {
 		return (
 			<ResponsiveContainer width="50%" height="50%">
 				<LineChart
-					data={data}
+					data={getDataFromLocalStorage()}
 					margin={{
 						top: 5,
 						right: 30,
 						left: 20,
 						bottom: 5,
 					}}>
-					<XAxis dataKey="date" stroke="#141F26" />
-					<YAxis stroke="#141F26" />
+					<XAxis dataKey="date" type="category" stroke="#ffffff70" />
+					<YAxis stroke="#ffffff70" type="number" />
 					<Tooltip />
-					<Legend />
+					<Legend iconSize={10}/>
 					<Line
 						type="monotone"
-						dataKey="coldWater"
+						dataKey="Холодная"
 						stroke="#8884D8"
 						strokeWidth={3}
+						
 					/>
 					<Line
 						type="monotone"
-						dataKey="hotWater"
+						dataKey="Горячая"
 						stroke="#85A7BB"
 						strokeWidth={3}
 					/>
 					<Line
 						type="monotone"
-						dataKey="heating"
+						dataKey="Отопление"
 						stroke="#84B9AC"
 						strokeWidth={3}
 					/>
 					<Line
 						type="monotone"
-						dataKey="electricity"
+						dataKey="Электричество"
 						stroke="#82CA9D"
 						strokeWidth={3}
 					/>
 					<Line
 						type="monotone"
-						dataKey="gas"
+						dataKey="Газ"
 						stroke="#A2C98C"
 						strokeWidth={3}
 					/>
 					<Line
 						type="monotone"
-						dataKey="sewage"
+						dataKey="Водоотведение"
 						stroke="#C1C87B"
 						strokeWidth={3}
 					/>
 					<Line
 						type="monotone"
-						dataKey="garbage"
+						dataKey="Мусор"
 						stroke="#FFC658"
 						strokeWidth={3}
 					/>

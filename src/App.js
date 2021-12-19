@@ -1,6 +1,4 @@
-import "./App.css";
 import UtilityComponent from "./Components/UtilityComponent/UtilityComponent";
-
 
 function App() {
 	return <div className="App">

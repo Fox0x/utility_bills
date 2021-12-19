@@ -11,7 +11,7 @@
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-evenly;
-	background-image: linear-gradient(#28414f, #3a6073);
+	background-image: linear-gradient(#16222A, #3a6073);
 }
 
 .graph__wrapper {
@@ -21,5 +21,5 @@
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
-	background-image: linear-gradient(#3a6073, #3a6073);
+	background-image: linear-gradient(#3a6073, #16222A );
 }

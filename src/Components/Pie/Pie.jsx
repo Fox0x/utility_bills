@@ -1,9 +1,12 @@
 import React, { PureComponent } from "react";
 import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from "recharts";
 
-const bill = JSON.parse(
-	localStorage.getItem(`${new Date().getMonth()}/${new Date().getFullYear()}`)
-) || [];
+const bill =
+	JSON.parse(
+		localStorage.getItem(
+			`${new Date().getMonth()}/${new Date().getFullYear()}`
+		)
+	) || [];
 
 const data = [
 	{ name: "Холодная вода", value: parseInt(bill.coldWater) },
@@ -83,7 +86,7 @@ const renderActiveShape = (props) => {
 				x={ex + (cos >= 0 ? 1 : -1) * 12}
 				y={ey}
 				textAnchor={textAnchor}
-				fill="#333">{`${value}₽ (${(percent * 100).toFixed(
+				fill="#ffffff70">{`${value}₽ (${(percent * 100).toFixed(
 				2
 			)}%)`}</text>
 		</g>
@@ -102,8 +105,6 @@ export default class Example extends PureComponent {
 	};
 
 	render() {
-
-
 		return (
 			<ResponsiveContainer width="50%" height="90%">
 				<PieChart>
@@ -115,7 +116,7 @@ export default class Example extends PureComponent {
 						cy="50%"
 						innerRadius={90}
 						outerRadius={200}
-						fill="#8884d8"
+						fill="#ffffff70"
 						dataKey="value"
 						onMouseEnter={this.onPieEnter}>
 						{data.map((entry, index) => (

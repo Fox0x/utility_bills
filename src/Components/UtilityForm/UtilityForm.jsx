@@ -33,8 +33,7 @@ export default function UtilityForm() {
 	};
 
 	return (
-		<div className={css.form__wrapper}>
-			<form className={css.utilityForm} onSubmit={saveBills}>
+		<form className={css.form} onSubmit={saveBills}>
 				<h2 className={css.form__header}>{currentDate}</h2>
 				<StyledInput
 					placeholder="Холодная вода"
@@ -87,6 +86,5 @@ export default function UtilityForm() {
 				/>
 				<StyledButton>✓</StyledButton>
 			</form>
-		</div>
 	);
 }

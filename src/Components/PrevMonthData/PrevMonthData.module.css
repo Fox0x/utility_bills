@@ -1,17 +1,19 @@
-.form {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 400px;
+.data__table {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
 	padding-left: 30px;
 	padding-right: 30px;
 	padding-bottom: 40px;
 	border-radius: 10px;
 	box-shadow: 5px 0px 15px 0px #000000bf;
+   
 }
 
-.form__header {
-	font-size: 30px;
+.data__table {
+    font-size: 15px;
 	text-align: center;
 	color: #ffffff70;
 	text-transform: capitalize;

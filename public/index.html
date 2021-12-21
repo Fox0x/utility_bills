@@ -11,5 +11,16 @@
 	<body>
 		<noscript>You need to enable JavaScript to run this app.</noscript>
 		<div id="root"></div>
+		<script type="text/javascript">
+			let addTestData = () => {
+				localStorage.setItem('07/2021', JSON.stringify({"id":6,"date":"июль 2021","coldWater":"134","hotWater":"32","heating":"443","electricity":"454","gas":"534","sewage":"64","garbage":"745"}));
+				localStorage.setItem('08/2021', JSON.stringify({"id":7,"date":"август 2021","coldWater":"124","hotWater":"132","heating":"403","electricity":"404","gas":"594","sewage":"74","garbage":"750"}));
+				localStorage.setItem('09/2021', JSON.stringify({"id":8,"date":"сентябрь 2021","coldWater":"134","hotWater":"32","heating":"443","electricity":"454","gas":"534","sewage":"64","garbage":"745"}));
+				localStorage.setItem('10/2021', JSON.stringify({"id":9,"date":"октябрь 2021","coldWater":"124","hotWater":"132","heating":"403","electricity":"404","gas":"594","sewage":"74","garbage":"750"}));
+				localStorage.setItem('11/2021', JSON.stringify({"id":10,"date":"ноябрь 2021","coldWater":"134","hotWater":"32","heating":"443","electricity":"454","gas":"534","sewage":"64","garbage":"745"}));
+				localStorage.setItem('12/2021', JSON.stringify({"id":11,"date":"декабрь 2021","coldWater":"124","hotWater":"132","heating":"403","electricity":"404","gas":"594","sewage":"74","garbage":"750"}));
+			return 'localStorage size: ' + localStorage.length;
+			}
+		</script>
 	</body>
 </html>
